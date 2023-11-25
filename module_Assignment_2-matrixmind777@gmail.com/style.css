@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@1,100&family=Caveat:wght@600&family=Outfit:wght@200&family=Russo+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: #130f1a;
+}
+
+.container {
+    color: #fff;
+}
+
+.home {
+    background-image: url("https://images.pexels.com/photos/6089654/pexels-photo-6089654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: 100vh;
+    background-size: cover;
+    background-position: 50px -120px;
+
+}
+
+.logo {
+    height: 120px;
+}
+
+.navitem {
+    display: inline;
+    margin: 20px 16px 20px 16px;
+    margin-top: 20px;
+    /* float: right; */
+}
+
+.nav {
+    float: right;
+    margin: 50px 80px 0 0;
+    justify-content: center;
+    display: inline;
+
+}
+
+.btn {
+    background-color: #f7941e;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 5px 20px;
+    border: none;
+    /* border-radius: 10px; */
+    transition: 0.3s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btn:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 0px 4px 8px 2px #969090a2;
+}
+
+.hometitle {
+    color: #fff;
+    font-family: serif;
+    font-size: 80px;
+}
+
+.hometitle strong {
+    color: #f7941e
+}
+
+.heading {
+    margin: 20px 0 0 50px;
+
+
+}
+
+.subtitle {
+    color: #ffffffe2;
+    font-size: 18px;
+    font-family: monospace;
+    line-height: 30px;
+    margin: 10px 0 0 0px;
+}
+
+.subtitle strong {
+    font-size: 30px;
+    color: #fff
+}
+
+.buttongroup {
+    margin: 60px 10px 0 0px;
+}
+
+.buttongroup .btn {
+    margin: 0 15px 0 0;
+    font-size: 25px;
+}
+
+.title {
+    color: #fff;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 65px;
+    font-family: 'Caveat', cursive;
+}
+
+.title h1 span {
+    transition: 0.2s ease;
+}
+
+.title h1 span:hover {
+    color: #f7941e;
+}
+
+.wrapper {
+
+    padding: 20px 40px;
+}
+
+.subheading {
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+.menu {
+    font-family: 'Outfit', sans-serif;
+    padding: 10px 0px;
+    font-size: 20px;
+    border: solid 2px white;
+    width: 33%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.img {
+    height: 140px;
+    transition: 0.3s;
+}
+
+.img:hover {
+    transform: scale(1.4);
+}
+
+.grid-menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 20px 20px;
+    align-items: center;
+    background-image: linear-gradient(#130f1a, rgb(85, 83, 83));
+}
+
+.gridItems {
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.gridItems h3 {
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    padding: 12px 5px;
+    border-radius: 10px;
+    margin: 15px 10px 5px 10px;
+    transition: 0.3s ease;
+}
+
+.gridItems h3:hover {
+    color: white;
+   transform: scale(1.3,2);
+    background-color: #f7941e;
+}
+
+.title p {
+    font-size: 30px;
+    color: #f7941e;
+    margin-top: 30px;
+    margin-left: -60px;
+}
+
+.mid {
+
+    margin: 40px auto;
+    width: 60%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.phone,
+.address,
+.email {
+    padding: 50px 30px;
+}
+
+.mid div strong {
+    color: #f7941e;
+    font-size: 20px;
+}
+
+.mid div p {
+    margin-top: 20px;
+}
+
+.address {
+    border-left: solid 3px #f7941e;
+    border-right: solid 3px #f7941e;
+}
+
+.contactForm {
+    text-align: center;
+}
+
+.contactForm p {
+    font-size: 20px;
+    color: #fff;
+    margin: 20px 0 40px 0;
+}
+
+.input {
+    width: 70%;
+    margin: 15px 10%;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    background-color: #202124;
+    transition: 0.3s ease;
+}
+
+.input:focus {
+    outline:solid 1px #f7941e;
+}
+
+.input:hover {
+    background-color: #303539;
+    box-shadow: 0px 5px 8px 2px #fff;
+}
+form button{
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 10px !important;
+}
+
+.about {
+
+    margin: 40px;
+    display: flex;
+    text-align: justify;
+    justify-content: space-evenly;
+    background-image: linear-gradient(#130f1a, rgb(85, 83, 83));
+}
+
+.about1,
+.about2,
+.about3 {
+    padding: 50px 30px;
+    margin: 0 20px;
+}
+
+.about div strong {
+
+    color: #f7941e;
+    font-size: 20px;
+}
+
+.about div li {
+    margin-top: 20px;
+}
+
+.about2 {
+    border-left: solid 3px #f7941e;
+    border-right: solid 3px #f7941e;
+}
