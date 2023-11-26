@@ -11,6 +11,7 @@
 </head>
 
 <body style="background-color:#bababa35;">
+    <!-- div with id header -->
     <div id="header"></div>
     <div class="container mt-5 mb-5" >
         <div>
@@ -46,6 +47,7 @@
         </div>
 
     </div>
+    <!-- div with id footer -->
 <div id="footer"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -55,6 +57,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script>
+          // function to dynamically render header and footer.
         $(function () {
             $('#header').load('./commonpage/header.html');
             $('#footer').load('./commonpage/footer.html');

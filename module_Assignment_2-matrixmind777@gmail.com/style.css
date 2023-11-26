@@ -22,6 +22,7 @@ body {
     background-position: 50px -120px;
 
 }
+/* ----------------------navbar stars----------------------------------- */
 
 .logo {
     height: 120px;
@@ -49,17 +50,18 @@ body {
     font-weight: 300;
     padding: 5px 20px;
     border: none;
-    /* border-radius: 10px; */
     transition: 0.3s ease;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
+/* hover effect on button */
 .btn:hover {
     color: black;
     background-color: white;
     box-shadow: 0px 4px 8px 2px #969090a2;
 }
+/* --------------------------navbar ends------------------------------- */
 
+/* ----------------------------home page styling--------------- */
 .hometitle {
     color: #fff;
     font-family: serif;
@@ -97,7 +99,8 @@ body {
     margin: 0 15px 0 0;
     font-size: 25px;
 }
-
+/* --------------home page ends-------------------------- */
+/*------------------ commen css for every page title------------------------ */
 .title {
     color: #fff;
     text-align: center;
@@ -123,7 +126,9 @@ body {
     text-align: center;
     margin: 10px 0 20px 0;
 }
+/* --------------------------------ends----------------------------- */
 
+/* ----------------------------------menu page styling--------------- */
 .menu {
     font-family: 'Outfit', sans-serif;
     padding: 10px 0px;
@@ -138,11 +143,11 @@ body {
     height: 140px;
     transition: 0.3s;
 }
-
+/* hover image on image it inlarges on hover */
 .img:hover {
     transform: scale(1.4);
 }
-
+/* apply grid property */
 .grid-menu {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
@@ -166,13 +171,15 @@ body {
     margin: 15px 10px 5px 10px;
     transition: 0.3s ease;
 }
-
+/* applying hover effect on items name they enlarge on hover */
 .gridItems h3:hover {
     color: white;
    transform: scale(1.3,2);
     background-color: #f7941e;
 }
+/* ------------------------------menu page ends---------------------------- */
 
+/* --------------------------contact us page starts------------------------- */
 .title p {
     font-size: 30px;
     color: #f7941e;
@@ -233,19 +240,23 @@ body {
 .input:focus {
     outline:solid 1px #f7941e;
 }
-
+/* hover effect on input field */
 .input:hover {
     background-color: #303539;
     box-shadow: 0px 5px 8px 2px #fff;
 }
+
 form button{
     margin-top: 20px;
     font-size: 20px;
     padding: 10px !important;
 }
+/* -----------------------contact us page ends------------------------------- */
+
+/* ------------------------------about starts-------------------------------- */
 
 .about {
-
+padding-bottom: 40px;
     margin: 40px;
     display: flex;
     text-align: justify;
@@ -274,3 +285,4 @@ form button{
     border-left: solid 3px #f7941e;
     border-right: solid 3px #f7941e;
 }
+/* -------------------------------about ends---------------------- */

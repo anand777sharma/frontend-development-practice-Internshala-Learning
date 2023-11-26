@@ -1,0 +1,47 @@
+-----------------index.html------------------
+in this page first i write the boilerplate code using ctl +!.
+then i created the navbar using unorded list and applying disply inline property to it.
+i used button tag within the a taf to connect to different pages.
+after that i use the the image having the source as url as the background of my home page .
+i have given the title and sub heading adn place them on the left side of the page
+below tha i have given to buttons to make the web page litle interactive.
+these pages connects to contact us page and about as page.
+
+--------------------------menu page------------------------
+in this page i just copy and past the navbar and logo.
+after this i start working on the title of the page.
+i apply the hover effect to the individual character of the title.
+this style of title i used in every page.
+after this i have the subheading for both brakfast and lunch menu.
+i use display grid propery for making my menu page .
+i apply gradient effect to the background of the menu.
+i apply hover effect to evry image and dish name, as on hover it become enlarge this is done with scale property.
+for the lunce part i just copy and past the breakfast part and make some necessary changes.
+
+-------------------------contact us page------------------------
+in this page i just copy and past the navbar logo and the title part i make the little changes that are needed.
+i divide this page in three parts first the title part next the mid part having company address and contact detail information.
+and third the contact form.
+for mid part i use the flex property and space evenly property it have three part first the phon number second the address and the third the email.
+i make use of border propery for making the divisons .
+after this the subheading is there the the contact form.
+i use hover effect on input feilds.
+and then after the submit button.
+
+---------------------------About page------------------------
+in this page i just copy and past the navbar logo and the title part i make the little changes that are needed.
+i divide the page in three part and aline them using display flef property.
+i use gradient as the background.
+in these three parts i use unordered list to describe the different aspecta of the resturant.
+
+---------------------------style.css-----------------------------
+in this file first i set the default margin and padding.
+then i set the background colour of all pages to #130f1a.
+the i write all section css property one by one.
+these section are 
+nav bar styling
+home page styling
+common title css
+menu page style 
+contact us page style 
+at last the about as page style

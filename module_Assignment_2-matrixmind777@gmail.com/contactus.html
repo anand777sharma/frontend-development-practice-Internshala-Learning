@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-
+        <!-- navbar -->
         <div class="navbar">
+            <!-- logo -->
             <img src="https://s.tmimgcdn.com/scr/800x500/212900/spoon-and-fork-restaurant-logo_212966-original.png"
                 alt="logo" class="logo">
             <ul class="nav">
+                <!-- navigation buttons -->
                 <li class="navitem"> <a href="index.html"><button class="btn">Home</button></a></li>
                 <li class="navitem"> <a href="menu.html"><button class="btn">Our Menu</button></a></li>
                 <li class="navitem"> <a href="About.html"><button class="btn">About Us</button></a></li>
@@ -21,65 +25,78 @@
         </div>
 
 
+
+        <!-- giving page title -->
         <div class="title">
             <h1>
-                <span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span><span> </span><span>U</span><span>s</span>
+                <!-- using Span to individually implement the css effect -->
+                <span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span><span>
+                </span><span>U</span><span>s</span>
             </h1>
+            <!-- Subheading -->
             <p>Get in touch with us !</p>
         </div>
 
-      
 
-    <div class="mid">
-        
+        <!-- giving the offce addredd and contact info -->
+        <div class="mid">
 
-        <div class="phone">
-            <strong>Phone</strong>
-            <p>
-                +91-9898989898
-                <br>
-                +91-9898989898
-            </p>
-        </div>
-        <div class="address">
-            <strong>
-                Address
-            </strong>
-            <p>
-                432/321/03 sector C Tower <br>Number 9 Gohwati <br> biznormarket 443213 <br> Alahabad Uttar Pradesh India
-            </p>
-        </div>
-        <div class="email">
-            <strong>
-                Email
-            </strong>
-            <p>
-                support@haveadine.com <br>
-                help@haveadine.com
-            </p>
-        </div>
-    </div>
-      
 
+            <div class="phone">
+                <!-- phon number -->
+                <strong>Phone</strong>
+                <p>
+                    +91-9898989898
+                    <br>
+                    +91-9898989898
+                </p>
+            </div>
+            <div class="address">
+                <!-- address -->
+                <strong>
+                    Address
+                </strong>
+                <p>
+                    432/321/03 sector C Tower <br>Number 9 Gohwati <br> biznormarket 443213 <br> Alahabad Uttar Pradesh
+                    India
+                </p>
+            </div>
+            <!-- mail -->
+            <div class="email">
+                <strong>
+                    Email
+                </strong>
+                <p>
+                    support@haveadine.com <br>
+                    help@haveadine.com
+                </p>
+            </div>
+        </div>
+
+        <!-- wrapper for apply styling to this part only  -->
         <div class="wrapper">
-            
-           <div class="contactForm">
-            <p>
-                If you got any question <br> please do not hesitate to send us a message. 
-            </p>
-            <form>
-                <input type="text" placeholder="enter Your name..."class="input" ><br>
-                <input type="text" placeholder="enter Your Email..." class="input"><br>
-                <input type="text" placeholder="enter Your Phone Number..." class="input"><br>
-                <textarea name="" id="" cols="30" rows="10" placeholder="enter Message..." class="input"></textarea>
-                <button class="btn">SEND MESSAGE</button>
-            </form>
-           </div>
+
+            <div class="contactForm">
+                <p>
+                    <!-- contact form heading -->
+                    If you got any question <br> please do not hesitate to send us a message.
+                </p>
+                <form>
+                    <input type="text" placeholder="enter Your name..." class="input"><br>
+                    <input type="text" placeholder="enter Your Email..." class="input"><br>
+                    <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="enter Your Phone Number..."
+                        class="input"><br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="enter Message..." class="input"></textarea>
+                    <!-- submit button -->
+                    <button class="btn" type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
 
         </div>
 
 
     </div>
-    
+
 </body>
+
 </html>

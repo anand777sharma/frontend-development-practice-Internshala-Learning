@@ -4,19 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body style="background-color:#bababa35;">
+    <!-- background colour is applied on the complete body -->
     <div id="header"></div>
+    <!-- div with id header -->
     <div class="container mb-5">
+        <!-- placing heading in center using text center class -->
         <h1 class="text-center mt-3 mb-4">
            Shopping Cart
         </h1>
+        <!-- row  -->
         <div class="row">
+            <!-- first column taking 75% width on large screen -->
             <div class="col-lg-9">
                 <div class="card">
                     <div class="card-header h3 text-center">
@@ -25,7 +30,7 @@
                     <div class="row mt-3">
                         <div class="col-lg-3 mx-auto ">
                             <div class="card mb-3 border-0">
-                                <img class="card-img-top ps-3 pe-3" src="./other pages/men/img/hoddie1.webp"
+                                <img class="card-img-top ps-3 pe-3" src="./men_img/hoddie1.webp"
                                     alt="Card image cap">
                             </div>
                         </div>
@@ -58,6 +63,7 @@
                 </div>
 
             </div>
+            <!-- second column taking 25% -->
             <div class="col-lg-3">
                 <div class="card h-100">
                     <div class="card-header h3 text-center">
@@ -77,6 +83,7 @@
             </div>
         </div>
     </div>
+    <!-- div with id footer -->
     <div id="footer"></div>
 
 
@@ -87,6 +94,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script>
+         // function to dynamically render header and footer.
         $(function () {
             $('#header').load('./commonpage/header.html');
             $('#footer').load('./commonpage/footer.html');
