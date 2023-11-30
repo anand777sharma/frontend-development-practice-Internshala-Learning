@@ -35,7 +35,7 @@
                     <input type="password" class="form-control" id="Password1">
                 </div>
 
-                <button type="submit" onclick="check()" class="btn text-white w-100" style="background-color:#ff802c;">Submit</button>
+                <button type="button" onclick="validateLogin()" class="btn text-white w-100" style="background-color:#ff802c;">Submit</button>
 
             </form>
             <p class="text-center h6">Do not Have Account ? <span  style="color:#007185;
@@ -45,7 +45,18 @@
     </div>
     <!-- div with id footer -->
 <div id="footer"></div>
-<script src="script.js"></script>
+<script>
+    function validateLogin() {
+        var email = document.getElementById("Input1").value;
+        var password = document.getElementById("Password1").value;
+
+        if (email === "admin@admin.com" && password === "123456") {
+            alert("Login successful");
+        } else {
+            alert("Incorrect email or password");
+        }
+    }
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -59,6 +70,7 @@
             $('#footer').load('./commonpage/footer.html');
         })
     </script>
+
 </body>
 
 </html>

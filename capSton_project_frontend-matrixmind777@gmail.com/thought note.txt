@@ -1,0 +1,136 @@
+------------------------------header.html------------------------------
+
+i this file first i have copied the cdn links from the bootstrap official website.
+then i copy the font awsom cdn link.
+then i divide the nave bar in the two parts.
+
+first part----------------
+
+for the making of first part i just copy the navbar from the bootstrap website and make some changes which are:
+change of background colour to primary usning bg-primary i added the login and cart button and also change their colour
+for making the logo part i used the logo image as the external source
+the text with this i used to give the logo a tag line. for that i used span tag for applying css.
+
+Second part----------------
+
+for the making of second part i used unordered lists with justify-content-center class to place the list in the center.
+all links are attached to different pages.
+i also include two dropdown in this which is women category and men category.
+i just chang the home link color to orange to contrast the background color.
+
+
+------------------------------footer.html------------------------------
+
+i this file first i have copied the cdn links from the bootstrap official website.
+then i copy the font awsom cdn link.
+For making this I just copied the footer code from the bootstrap official website.
+After that I just made little changes and replace the links with my websites all pages.
+I also added the background to the buttons of my social media links.
+
+
+------------------------------index.html------------------------------
+
+i this file first i have copied the cdn links from the bootstrap official website.
+then i copy the font awsom cdn link.
+in the heder part i place the image as the background within the container-fluid to take the complete width.
+i place the title and sub title of this page on this image.
+for doing so i used d-flex justify-content-center align-items-center h-100 these classes.
+for inlarging the font size i use disply class and fw-bold and fw-medium.
+Used the jQuery load function to dynamically render header and footer content.
+Within the body.
+
+carousl part-----------------
+
+on this page i have created three carousal for three different devices.
+one for large screen,second for medium screen and third for small screen.
+all the carousal have three slides.
+in large screen it shows 6 product at a time.
+in medium screen it shows 3 product at a time.
+in small screen it shows 1 product at a time.
+these slides are in forms of rows and column with having product card in it.
+
+card design-------------------
+
+this card have two part one is image and the other is product detail and buynow button.
+for applying css on the cadr text i use the span tag with inline css.
+for changing the button color i used inline css.
+
+The header section dynamically loads content from the header.html file. 
+The footer section, similarly, loads content from the footer.html file. 
+
+------------------------------cart.html----------------------------
+
+For this cart.html file, I started by incorporating Bootstrap and FontAwesome CDNs for styling and icons.
+The body has a background color.
+The header section dynamically loads content from the header.html file. 
+The footer section, similarly, loads content from the footer.html file. 
+Copied Bootstrap and FontAwesome CDNs.
+Used the jQuery load function to dynamically render header and footer content.
+Within the body.
+The page title is "Shopping Cart."
+The main content is divided into two columns using Bootstrap classes.
+
+left column--------------------
+
+The left column displays the items in the cart, each in a card format.
+Includes an image, product details, and a delete button.
+Applied Bootstrap classes for styling.
+
+right column---------------------
+
+The right column provides a summary.
+Displays the cost, shipping (with a strike-through), and total.
+Includes a checkout button.
+
+The footer is loaded dynamically.
+The JavaScript section includes a script to dynamically load the header and footer.
+
+----------------------------contactUs.html----------------------------
+
+For this Contact Us page, I began by including Bootstrap and FontAwesome CDNs in the head section to ensure proper styling and icons.
+The body has a background color to maintain a good look.
+The header content is dynamically loaded from the header.html file using jQuery's load function.
+The footer section, similarly, loads content from the footer.html file. 
+The main content is enclosed in a container with top and bottom margins.
+The page heading, Contact Us, is centered using Bootstrap classes.
+The content is organized in a row with two columns.
+The first column (col-lg-6) displays a card with an image using the card-img-top class.
+The second column (col-lg-6) contains a form for users to provide their details.
+The form includes Fields for name, email, and a message, each within a form group.
+A submit button styled with Bootstrap classes.
+The image in the first column is sourced from an external URL and placed within a Bootstrap card.
+The JavaScript section includes a script to dynamically load the header and footer from external files.
+
+-----------------------login.html and signup.html--------------------
+
+The header content is dynamically loaded from the header.html file using jQuery's load function.
+The footer section, similarly, loads content from the footer.html file. 
+The main content is enclosed in a container with top and bottom margins.
+The page heading, "Login," is centered using Bootstrap classes.
+Below the heading The content is organized in a column (col-lg-6) to create a clean and centered form for user login.
+The form includes fields for email and password, each within a form group.
+A submit button styled with Bootstrap classes provides a cohesive look.
+i used the on page script for creating the form validation logic.
+in which it compare the email with admin@admin.com and password with 123456.
+A link to the signup page is included for users who don't have an account yet.
+The JavaScript section includes a script to dynamically load the header and footer from external files.
+for the signup page i just copied all the content and made little chnges.
+
+---------------------------other product pages------------------------
+
+The header content is dynamically loaded from the header.html file using jQuery's load function.
+The footer section, similarly, loads content from the footer.html file. 
+The main content is enclosed in a container-fluid with top and bottom margins.
+The page heading is centered using Bootstrap classes.
+Products are displayed in rows, each containing six columns representing individual items.
+Each product is presented in a Bootstrap card, featuring an image, title, and detailed information.
+Inline CSS is utilized within span tags to apply specific styles, such as star ratings, discount labels, and price details.
+"Buy Now" buttons are styled with a cohesive color scheme, ensuring a uniform look across all products.
+
+--------------------------------style.css-----------------------------
+
+in this file i have apply css to the home page title background and color.
+
+
+*************************************************************************************************************
+*************************************************************************************************************
