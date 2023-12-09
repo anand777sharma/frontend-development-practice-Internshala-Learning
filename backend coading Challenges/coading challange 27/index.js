@@ -6,4 +6,4 @@ var url=require('url');
    let result=url.parse(add,true);
    let student = result.query;
    console.log(`Student ID: ${student.id}`);
-   console.log(`Student name: ${student.name}`); 
+   console.log(`Student name: ${student.name}`);
