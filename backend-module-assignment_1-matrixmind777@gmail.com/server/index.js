@@ -1,8 +1,8 @@
 const bodyParser = require("body-parser");
 const express = require("express")
-const app = express();
 const storage = require("node-persist");
 
+const app = express();
 var jsonParser = bodyParser.json();
 storage.init()
 // retriving student data from the storage based on id
@@ -51,7 +51,7 @@ app.get('/allstudents', async (req, res) => {
     try {
         var items = await storage.values();
         //initalization of the variable to store the response
-        var data = '<h1>All Students Data!</h1> <hr/>';//this part will become as the heading of the page on the out put screen
+        var data = '<h1>All Students Data!</h1> <hr/>';//this part will become as the heading of the page on the output screen
         for (let s of items) {
             data += `<div>
                     <h2>Student Id: ${s.student_id}</h2>

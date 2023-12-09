@@ -1,0 +1,12 @@
+------------------folder creation----------------------
+
+for making this Assignment first i have created the server folder.
+then i use npm init cammand in the terminal to create the package.json file in server folder.
+then i just install some packages uing terminal that i am going to use in the making of node backend.
+these packages are:express, body-parser, nodemon, node-persisit.
+i use the command "npm i Package_name".
+then i create index.js file in server folder .
+after this i add the start Script in the package.json file.
+
+------------------index.js-------------------------------
+on the top i imported express, node-persist as storage and bodyParser.
