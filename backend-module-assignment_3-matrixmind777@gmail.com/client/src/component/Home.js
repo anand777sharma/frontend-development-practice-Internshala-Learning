@@ -9,18 +9,7 @@ function Home() {
 
     return (
         <>
-            {/* <Container className="mb-3 mt-3">
-                input field
-                <Form.Label htmlFor="inputPassword5" className="w-25">
-                    Enter Todo
-                </Form.Label>
-                <Form.Control
-                    type="Text"
-                    id="todo"
-                    placeholder="i want to complete...."
-                    aria-describedby="todo"
-                />
-            </Container> */}
+          
 
             <Container className="row mx-auto mt-5">
                 <Container className='col-lg-7'>

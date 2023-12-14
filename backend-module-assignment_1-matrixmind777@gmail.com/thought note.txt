@@ -10,3 +10,21 @@ after this i add the start Script in the package.json file.
 
 ------------------index.js-------------------------------
 on the top i imported express, node-persist as storage and bodyParser.
+then created the instance for the express as app.
+then bodyParser is used to parse the json.
+next initilazation of storage using storage.init().
+
+post "/student"----------------------------------
+app.post function is used to store students data in the storage folder.
+
+get "/allstudents"----------------------------------
+app.get function is used to retrive data from the storage.
+"for of" loop is used for itrating on every student data.
+
+get "/student/:id"----------------------------------
+app.get function is used to retrive data from the storage.
+req.params.id is used to get the id from the request url.
+then storage.getItem() function is used to get the student with the same id otherwise student not found respond is send.
+
+get "/topper"----------------------------------
+app.get function is used to retrive data from the storage.
