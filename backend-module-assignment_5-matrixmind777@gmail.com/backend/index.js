@@ -1,0 +1,18 @@
+const express = require('express');
+const dotenv = require('dotenv');
+require('./models/dbconnect');
+
+//configure Dot ENV
+dotenv.config();
+const app = express();
+const PORT = process.env.PORT;
+app.use(express.json()); //JSON Parser
+//temp check
+app.get('/', (req, res) => {
+    res.send('Helooo....')
+})
+app.use('/api/v1/user',require('./routes/user_routes'));
+
+app.listen(PORT, () => {
+    console.log(`Application started on PORT ${PORT}`);
+})

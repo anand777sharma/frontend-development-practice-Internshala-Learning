@@ -5,7 +5,25 @@ const storage = require("node-persist");
 
 const app = express();
 app.use(cors());
-storage.init()
+
+//intialize storage
+storage.init();
+
+// async function init(){
+// 	await storage.init();
+// 	await storage.clear();
+// }
+// const init1=async()=>{
+//     try {
+//         await storage.init();
+//         console.log("Storage Initialized");
+//         await storage.clear();
+//         console.log('Storage cleared');
+//     } catch (error) {
+//         console.log("Storage not initialied")
+//     }
+// }
+
 jsonParser = bodyParser.json();
 // adding todos to the storage
 app.post("/todo", jsonParser, async (req, res) => {

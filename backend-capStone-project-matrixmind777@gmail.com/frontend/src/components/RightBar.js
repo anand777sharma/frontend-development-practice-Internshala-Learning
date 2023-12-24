@@ -18,9 +18,9 @@ const RightBar = () => {
           <a href="#" className="list-group-item list-group-item-action border-0 rounded-5 " style={{padding:"8px 8px !important"}}><div>
             <div className="d-flex">
               <Profile source="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg?auto=compress&cs=tinysrgb&w=600"
-                size="45px" />
+                size="40px" />
               <div>
-                <p className="ps-2 fs-6"><span className='fw-bold'>Anand Sharma </span><br /><span className='fs-6'>@anand777sharma</span></p>
+                <p className="ps-2 fs-6"><span className='fw-bold'>Anand Sharma </span><br /><span style={{fontSize:14}}>@anand777sharma</span></p>
               </div>
               <div>
               <button className="btn btn-primary shadow ms-3 px-3 rounded-5 me-auto">
@@ -33,9 +33,9 @@ const RightBar = () => {
           <a href="#" className="list-group-item list-group-item-action border-0 rounded-5 " style={{padding:"8px 8px !important"}}><div>
             <div className="d-flex">
               <Profile source="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg?auto=compress&cs=tinysrgb&w=600"
-                size="45px" />
+                size="40px" />
               <div>
-                <p className="ps-2 fs-6"><span className='fw-bold'>Anand Sharma </span><br /><span className='fs-6'>@anand777sharma</span></p>
+                <p className="ps-2 fs-6"><span className='fw-bold'>Anand Sharma </span><br /><span  style={{fontSize:14}}>@anand777sharma</span></p>
               </div>
               <div>
               <button className="btn btn-primary shadow ms-3 px-3 rounded-5 me-auto">
@@ -48,9 +48,9 @@ const RightBar = () => {
           <a href="#" className="list-group-item list-group-item-action border-0 rounded-5" style={{padding:"8px 8px !important"}}><div>
             <div className="d-flex">
               <Profile source="https://images.pexels.com/photos/3763152/pexels-photo-3763152.jpeg?auto=compress&cs=tinysrgb&w=600"
-                size="45px" />
+                size="40px" />
               <div>
-                <p className="ps-2 fs-6"><span className='fw-bold'>Anand Sharma </span><br /><span className='fs-6'>@anand777sharma</span></p>
+                <p className="ps-2 fs-6"><span className='fw-bold'>Anand Sharma </span><br /><span style={{fontSize:14}}>@anand777sharma</span></p>
               </div>
               <div>
               <button className="btn btn-primary shadow ms-3 px-3 rounded-5 me-auto">

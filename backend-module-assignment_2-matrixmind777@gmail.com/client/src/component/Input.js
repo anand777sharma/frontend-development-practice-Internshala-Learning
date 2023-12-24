@@ -18,7 +18,7 @@ function Input() {
 
         console.log(JSON.stringify(todo));
         if (res.status === 201) {
-            alert("user added successfully");
+            alert("Todo added successfully");
             setTodo({ id:"", todo: "", des: "" })
         }
     }

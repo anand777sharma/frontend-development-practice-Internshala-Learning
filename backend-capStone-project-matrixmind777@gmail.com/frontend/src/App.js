@@ -1,14 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
-// import Home from './Pages/Home';
-import Login from './Pages/Login';
+
+import Tweet from './Pages/Tweet';
+import Home from './Pages/Home';
 
 function App() {
   return (
     <div >
-     {/* <Home/> */}
-     <Login/>
+      {/* <Home/> */}
+     <Tweet/>
     </div>
   );
 }

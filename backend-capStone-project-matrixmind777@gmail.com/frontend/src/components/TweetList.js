@@ -4,7 +4,7 @@ import TweetCard from './TweetCard'
 const TweetList = () => {
   return (
     <div >
-        <div className="container-fluid d-flex bg-white  py-1">
+        <div className="container-fluid d-flex bg-white border border-2 border-bottom-0 py-1">
             <div className="fs-5 fw-bold mt-3">
                 Home
             </div>

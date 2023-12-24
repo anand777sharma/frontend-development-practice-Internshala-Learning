@@ -22,13 +22,14 @@ const getData= async ()=>{// getting data from backend and storing it in res var
 }
 useEffect(()=>{
     getData()
-},[])
+},[todo])
     
 return (
     // fragment are used to wrap multiple elements without adding an extra node
     <>
       {/* Container component is used for complete width */}
       <Container>
+      <h1 className="text-light text-center">You have {todo.length} tasks pending....</h1>
         {/* Accordion component is use to display a collapsible list of todos */}
         <Accordion className="m-4 p-3 bg-light shadow-lg rounded-4">
 

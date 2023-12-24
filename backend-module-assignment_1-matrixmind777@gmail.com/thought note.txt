@@ -1,3 +1,7 @@
+==========================================================
+you first have to run npm i to install the node module
+==========================================================
+
 ------------------folder creation----------------------
 
 for making this Assignment first i have created the server folder.
@@ -28,3 +32,4 @@ then storage.getItem() function is used to get the student with the same id othe
 
 get "/topper"----------------------------------
 app.get function is used to retrive data from the storage.
+in this par we first fatch all the data then use javascript logic to show the topper with higiest gpa.
