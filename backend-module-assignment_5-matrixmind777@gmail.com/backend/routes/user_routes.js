@@ -1,13 +1,11 @@
 const express= require('express');
-const { getAllUsers, getUserById, addUser, updateUser, deleteUser }
- = require('../controllers/user_controller');
+const autheticate = require('../middlewares/protectedRoute');
 
 const router= express.Router();
 
-router.get('/',getAllUsers);
-router.get('/:id',getUserById);
-router.post('/',addUser);
-router.put('/:id',updateUser);
-router.delete('/:id',deleteUser);
+router.get('/profile',autheticate,(req,res)=>{
 
-module.exports= router;
+    res.send(req.user);//we will pass the user object to access
+});
+
+module.exports=router;

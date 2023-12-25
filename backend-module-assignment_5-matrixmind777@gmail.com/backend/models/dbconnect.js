@@ -4,4 +4,4 @@ dotenv.config();
 
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>console.log("Connected.....!!!"))
-.catch((error)=>console.log("Error i Connection",error))
+.catch((error)=>console.log("Error in Connection",error))
