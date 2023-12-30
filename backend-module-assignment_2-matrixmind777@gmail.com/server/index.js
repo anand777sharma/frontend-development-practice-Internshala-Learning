@@ -7,22 +7,14 @@ const app = express();
 app.use(cors());
 
 //intialize storage
-storage.init();
+async function init(){
+	await storage.init();
+    console.log("Storage Initialized");
+	await storage.clear();
+    console.log('Storage cleared');
+}
+init()
 
-// async function init(){
-// 	await storage.init();
-// 	await storage.clear();
-// }
-// const init1=async()=>{
-//     try {
-//         await storage.init();
-//         console.log("Storage Initialized");
-//         await storage.clear();
-//         console.log('Storage cleared');
-//     } catch (error) {
-//         console.log("Storage not initialied")
-//     }
-// }
 
 jsonParser = bodyParser.json();
 // adding todos to the storage

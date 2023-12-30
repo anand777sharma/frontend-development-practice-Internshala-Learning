@@ -1,0 +1,9 @@
+.bg-image{
+    background: url("../img/banner.jpg");
+    height: 500px;
+}
+.home-heading{
+    background-color: #ff802c;
+    padding: 20px;
+    border-radius: 50px;
+}
