@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "../allStyle/tweetDetail.css";
 import TweetCard from './TweetCard'
 
 const TweetList = () => {
@@ -8,7 +9,7 @@ const TweetList = () => {
             <div className="fs-5 fw-bold mt-3">
                 Home
             </div>
-            <button className="btn btn-primary btn-lg shadow m-1 px-5 rounded-5 ms-auto">
+            <button className="btn btn-primary btn-lg shadow m-1 px-5 rounded-5 ms-auto" data-bs-toggle="modal" data-bs-target="#createtweetModal">
                 post
             </button>
         </div>
