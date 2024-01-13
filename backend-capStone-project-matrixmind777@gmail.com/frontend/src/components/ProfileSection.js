@@ -10,7 +10,7 @@ const ProfileSection = () => {
             <EditProfileModal/>
             <div className="container-fluid d-flex align-items-center bg-white border border-2 border-bottom-0 py-1">
                 <Link className="btn btn-light rounded-5" to="/home">
-                    <i class=" fas fa-solid fa-arrow-left"></i>
+                    <i className=" fas fa-solid fa-arrow-left"></i>
                 </Link>
                 &nbsp;
                 &nbsp;

@@ -47,7 +47,6 @@ const getProductById = async (req, res) => {
     }
 };
 
-
 const editProductById = async (req, res) => {
     try {
       const { name, description, price, category, quantity } = req.body;
@@ -81,7 +80,6 @@ const editProductById = async (req, res) => {
     }
   };
   
-
 // 		/deleteProductById
 const deleteProductById = async (req, res) => {
     const product = await ProductModel.findById(req.params.id);

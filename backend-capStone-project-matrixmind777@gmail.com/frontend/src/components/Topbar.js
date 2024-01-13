@@ -12,7 +12,7 @@ const Topbar = () => {
                 </a>
                 <a className="text-decoration-none border-0 fs-5 mt-1 text-dark"> 
                 <div className="ms-auto fs-3 text-muted ">
-                <i class="fas fa-sign-out-alt fa-lg pe-2"></i>
+                <i className="fas fa-sign-out-alt fa-lg pe-2"></i>
                 </div>
                 </a>
             </div>

@@ -1,16 +1,28 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useAuth } from '../context/auth';
+import { Outlet } from 'react-router-dom';
+import axios from 'axios';
+import BackToLoginSpinner from './spinner/BackToLoginSpinner';
 
-const PrivateRoute=({children,isAuthenticated,...rest})=>{
+const PrivateRoute=()=>{
+const [ok,setOk]=useState(false);
+const [auth,setAuth]=useAuth();
 
-    const navigate= useNavigate();
-
-    useEffect(()=>{
-        if(!isAuthenticated){
-            navigate('/login')
+useEffect(()=>{
+const checkAuth = async()=>{
+    const resp=await axios('http://localhost:5000/api/user/profile',{
+                headers:{Authorization:`Bearer ${auth?.token}`}
+            })
+            console.log(resp)
+            if(resp.data){
+                setOk(true)
+            }else{
+            setOk(false)
         }
-    },[isAuthenticated,navigate])
+};
+if(auth?.token) checkAuth();
 
-    return isAuthenticated?<>{children}</>  :null
+},[auth?.token])
+  return ok? <Outlet/>:<BackToLoginSpinner/> ;
 }
 export default PrivateRoute;

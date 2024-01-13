@@ -8,7 +8,7 @@ const EditProfileModal = () => {
             <div className="modal-dialog rounded-4">
                 <div className="modal-content rounded-4">
                     <div className="modal-header border-0 " style={{height:50}} >
-                    <button type="button" class="btn btn-light rounded-5 px-3 fs-4" data-bs-dismiss="modal" aria-label="Close">X</button>
+                    <button type="button" className="btn btn-light rounded-5 px-3 fs-4" data-bs-dismiss="modal" aria-label="Close">X</button>
                   
                         <p className="fw-bold fs-5 mt-4">
                             Edit Profile

@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken');
-const dontend = require('dotenv').config();
+const dontenv = require('dotenv');
 const User = require('../models/User');
+
+dontenv.config();
 
 const autheticate = async (req, res, next) => {
 
@@ -8,13 +10,13 @@ const autheticate = async (req, res, next) => {
     const authHeader = req.headers["authorization"];
 
     if (!authHeader) {
-        return res.status(401).json({ message: "UnAuthoried.." })
+        return res.status(401).json({ message: "UnAuthoried.. authHeader missing" })
     }
     //if header is available then extract token for the same.
     const token = authHeader.replace('Bearer ', "");
 
     if (!token) {
-        return res.status(401).json({ message: "UnAuthoried.." })
+        return res.status(401).json({ message: "UnAuthoried.. token missing" })
     }
     try {
         //verify and decode the Token

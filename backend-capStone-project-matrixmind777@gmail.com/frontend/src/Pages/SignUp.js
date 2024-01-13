@@ -1,7 +1,28 @@
-import React from 'react'
-import { Button, Card, Col, Container, Form, InputGroup, Row } from "react-bootstrap"
-
+import React, { useState } from 'react'
+import { Button, Card, Col, Container, Form, Row } from "react-bootstrap"
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import axios from "axios";
 const SignUp = () => {
+    const [user, setUser] = useState({ name: '', email: '', username: '', password: '' });
+    const submitHandler = async (e) => {
+        // console.log(user);
+        e.preventDefault();
+        try {
+            const resp = await axios.post('http://localhost:5000/api/auth/register', user);
+            console.log(resp);
+            if (resp.status === 201) {
+                // console.log(resp.data.message);
+                toast.success(resp.data.message);
+                setUser({ name: '', email: '', username: '', password: '' });
+            }
+        } catch (error) {
+            // console.log(error);
+            // console.log(error.response.data.message);
+            toast.error(error.response.data.message);
+
+        }
+    }
     return (
         <div >
             <Container className='vh-100 d-flex align-items-center justify-content-center '>
@@ -18,29 +39,46 @@ const SignUp = () => {
                             <h2 className='text-center mb-3 '>
                                 SignUp
                             </h2>
-                            <InputGroup className="mb-3 shadow-sm">
 
-                                <Form.Control aria-label="Dollar amount (with dot and two decimal places)" placeholder="name" />
-                            </InputGroup>
-                            <InputGroup className="mb-3 shadow-sm">
-                                <Form.Control aria-label="Dollar amount (with dot and two decimal places)" placeholder="username" />
+                            <Form onSubmit={submitHandler}>
+                                <Form.Group className="mb-3 shadow-sm">
 
-                            </InputGroup>
-                            <InputGroup className="mb-3 shadow-sm">
-                                <Form.Control aria-label="Dollar amount (with dot and two decimal places)" placeholder="email" />
+                                    <Form.Control type='text'
+                                        placeholder='John Doe'
+                                        value={user.name}
+                                        onChange={(e) => setUser({ ...user, name: e.target.value })} />
+                                </Form.Group>
+                                <Form.Group className="mb-3 shadow-sm">
+                                    <Form.Control type='text'
+                                        placeholder='johndoe1'
+                                        value={user.username}
+                                        onChange={(e) => setUser({ ...user, username: e.target.value })} />
 
-                            </InputGroup>
-                            <InputGroup className="mb-4 shadow-sm">
-                                <Form.Control aria-label="Dollar amount (with dot and two decimal places)" placeholder="Password" />
+                                </Form.Group>
+                                <Form.Group className="mb-3 shadow-sm">
+                                    <Form.Control type='email'
+                                        placeholder='john.doe@gmail.com'
+                                        value={user.email}
+                                        onChange={(e) => setUser({ ...user, email: e.target.value })} />
 
-                            </InputGroup>
+                                </Form.Group>
+                                <Form.Group className="mb-4 shadow-sm">
+                                    <Form.Control type='password'
+                                        placeholder='secret'
+                                        value={user.password}
+                                        onChange={(e) => setUser({ ...user, password: e.target.value })} />
 
-                            <div className="d-grid gap-2 shadow">
+                                </Form.Group>
 
-                                <Button variant="secondary" size="lg">
-                                    SignUp
-                                </Button>
-                            </div>
+                                <div className="d-grid gap-2 shadow">
+
+                                    <Button className='btn btn-lg btn-secondary shadow' type='submit'>
+                                        SignUp
+                                    </Button>
+                                </div>
+                            </Form>
+
+
                             <br />
                             <div className="row d-flex justify-content-center align-items-center">
                                 <div className="col-lg-5"><hr className="my-4" /></div>
@@ -48,18 +86,18 @@ const SignUp = () => {
                                     or</h4></div>
                                 <div className="col-lg-5"><hr className="my-4" /></div>
                             </div>
-                          
+
                             <p className='text-center'>
                                 Already have Account?
                             </p>
-                            <a className='text-decoration-none' href="#">
+                        
                                 <div className="d-grid gap-2 shadow">
 
-                                    <Button variant="secondary" size="lg">
-                                       Login
-                                    </Button>
+                                    <Link className='btn btn-lg btn-secondary shadow' to="/">
+                                        Login
+                                    </Link>
                                 </div>
-                            </a>
+                       
                         </>
                     </Col>
                 </Row>

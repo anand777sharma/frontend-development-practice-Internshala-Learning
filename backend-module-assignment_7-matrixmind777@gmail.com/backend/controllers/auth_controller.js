@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt')
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv').config();
+
 const register = async (req, res) => {
     try {
         console.log(req.body);
@@ -33,7 +34,7 @@ const register = async (req, res) => {
         res.status(500).json({ message: "An error eccured while regsitration", error })
     }
 }
-const login = async (req,res) => {
+const login = async (req, res) => {
     try {
         const { email, password } = req.body;
         if (!email || !password) {
@@ -44,21 +45,22 @@ const login = async (req,res) => {
             return res.status(400).json({ message: "Email Not registered with Us yet.." })
         }
         const match = await bcrypt.compare(password, user.password);
-        const payload={
-            _id:user._id,
-            name:user.name,
-            email:user.email
+        const payload = {
+            _id: user._id,
+            name: user.name,
+            email: user.email
         }
         if (match) {
             const token = await jwt.sign(payload, process.env.JWT_SECRET);
-            const userdata={
-                _id:user._id,
-                name:user.name,
-                email:user.email,
-                username:user.username,
-                isAdmin:user.isAdmin
+            const userdata = {
+                _id: user._id,
+                name: user.name,
+                email: user.email,
+                username: user.username,
+                address: user.address,
+                isAdmin: user.isAdmin
             }
-            return res.status(200).json({ message: "Logged in successfully",token,user:userdata})
+            return res.status(200).json({ message: "Logged in successfully", token, user: userdata })
         } else {
             return res.status(400).json({ message: "Email and password Incorrect.." })
         }
@@ -68,6 +70,4 @@ const login = async (req,res) => {
     }
 }
 
-module.exports = {
-    register, login
-}
+module.exports = { register, login }

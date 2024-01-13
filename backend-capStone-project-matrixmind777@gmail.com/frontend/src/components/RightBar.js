@@ -7,7 +7,7 @@ const RightBar = () => {
       <div className="container-fluid bg-white pb-2 sticky-top">
         <form className="d-flex" >
           <input className="form-control fs-5 px-3 py-2 rounded-5 mt-2 shadow" type="text" placeholder="Search" aria-label="Search" />
-          <a className="text-decoration-none text-muted" style={{ margin: "20px 0px 0 -35px" }} type="submit"><i class="fas fa-search fa-lg pe-2"></i></a>
+          <a className="text-decoration-none text-muted" style={{ margin: "20px 0px 0 -35px" }} type="submit"><i className="fas fa-search fa-lg pe-2"></i></a>
         </form>
       </div>
       <div className="card mt-3 rounded-5 border-0 ">

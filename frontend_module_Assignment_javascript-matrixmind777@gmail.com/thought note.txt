@@ -1,0 +1,22 @@
+-------------------index.html--------------------
+in this project i first worked ont the basic structur using bootstrap framework 
+i first create a div with a container class so that it can leave some spacing from the left and right side.
+i used h1 tag for the heading with text-center class to place the title in the center.
+i created a div with with row class and a mt-4
+inside this row i created three columns-> first for the first number ,second for the operater and third for the second number.
+with first number input i used oninput to use clearanswer() function
+with opereter select tag i used onchange to use clearanswer() function
+with Second number input i used oninput to use clearanswer() function
+then on submit button i connect the calculate() function.
+after this i have the answer textfield whis is disabled and with class disabled
+after that i have a div with id error to show the error.
+
+------------------script.js----------------
+i first have the clear answer function but i have made this functin at the last only
+i use this function to clear the value of answer and error on the change of any number.
+then i have create returning functin for the mathematical calculations.
+after this i have created the calculate() function 
+in this function the operation is chooed based on the operater selected by the user.
+after that we will check that the out put is number or no using isNAN function.
+if the number is number then the number isdisplayed as output else the error is displayed
+without any value.

@@ -3,30 +3,21 @@ import React, { useState } from 'react';
 import { Button, CardImg, Col, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import swal from 'sweetalert';
 function Register() {
     const [user, setUser] = useState({ name: '', email: '', username: '', password: '' });
-    const subminHandler = async (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
-        //console.log(user);
         try {
             const resp = await axios.post('http://localhost:5000/api/auth/register', user);
             console.log(resp);
             if (resp.status === 201) {
-                // alert(resp.data.message);
                 toast.success(resp.data.message);
                 setUser({ name: '', email: '', username: '', password: '' });
             }
         } catch (error) {
             console.log(error);
-            //alert(error.response.data.message)
-            //toast.error(error.response.data.message);
-            swal({
-                title: "Error",
-                text: error.response.data.message,
-                icon: "warning",
-                dangerMode: true,
-            })
+            toast.error(error.response.data.message);
+          
         }
     }
     return (
@@ -37,7 +28,7 @@ function Register() {
                     alt='Brand Image' />
             </Col>
             <Col lg={6}>
-                <Form className='mb-3' onSubmit={subminHandler}>
+                <Form className='mb-3' onSubmit={submitHandler}>
                     <Form.Group className='mb-3'>
                         <Form.Control type='text'
                             placeholder='John Doe'
