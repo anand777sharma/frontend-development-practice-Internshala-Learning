@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Card, Col, Container, Form, InputGroup, Row } from "react-bootstrap"
+import { Button, Card, Col, Container, Form, Row } from "react-bootstrap"
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/auth';
 import axios from 'axios';
@@ -12,12 +12,13 @@ const Login = () => {
     const [user, setUser] = useState({ email: '', password: '' });
     const [auth, setAuth] = useAuth();
     const navigate = useNavigate();
+   
     const submitHandler = async (e) => {
         e.preventDefault();
 
         try {
             const resp = await axios.post('http://localhost:5000/api/auth/login', user);
-            if (resp.status == 200) {
+            if (resp.status === 200) {
 
                 setAuth({
                     ...auth,

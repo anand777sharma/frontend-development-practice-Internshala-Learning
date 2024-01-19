@@ -1,10 +1,10 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
 import TweetList from '../components/TweetList'
-import RightBar from '../components/RightBar'
 import Navbar from '../components/Navbar'
 import Topbar from '../components/Topbar'
-import CreateTweetModal from '../components/CreateTweetModal'
+import CreateTweetModal from '../components/floatingModels/CreateTweetModal'
+import ReplyTweetModal from '../components/floatingModels/ReplyTweetModal'
 const Home = () => {
     return (
         <div>
@@ -18,9 +18,10 @@ const Home = () => {
                         <TweetList />
 
                       <CreateTweetModal/>
+                      {/* <ReplyTweetModal/> */}
                     </div>
                     <div className="col-lg-3 d-none d-lg-block ps-3">
-                        <RightBar />
+                        {/* <RightBar /> */}
                     </div>
                 </div>
                 <Navbar />

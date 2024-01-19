@@ -26,7 +26,7 @@ const Payment = () => {
     try {
       let total = 0;
       cart?.map((item) => {
-        total = total + item.price;
+        total = total + item.price*item.q;
       })
       return total;
     } catch (error) {
@@ -154,7 +154,7 @@ const Payment = () => {
                               <td><img src={`http://localhost:5000/uploads/${p.picture.split('\\')[1]}`}
                                 alt={p.name} height={60} /></td>
                               <td>{p.name} <br />{p.discription}</td>
-                              <td>Quantity({p?.quantity})</td>
+                              <td>Quantity({p?.q})</td>
                             </tr>
                           ))
                           }

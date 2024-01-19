@@ -6,9 +6,14 @@ const TweetSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+   
     tweetedby: {
         type: ObjectId,
         ref: "User"
+    },
+    replyingto: {
+        type: ObjectId,
+        ref: "User",
     },
     likes: [
         {
@@ -16,7 +21,7 @@ const TweetSchema = new mongoose.Schema({
             ref: "User"
         }
     ],
-  
+
     retweetedby: [
         {
             type: ObjectId,
@@ -25,7 +30,7 @@ const TweetSchema = new mongoose.Schema({
     ],
     picture: {
         type: String,
-       default:null
+        default: null
     },
     replies: [
         {

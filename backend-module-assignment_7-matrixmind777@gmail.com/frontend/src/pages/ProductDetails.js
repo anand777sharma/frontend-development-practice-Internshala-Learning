@@ -1,10 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useCart } from '../context/cart'
+import { useWish } from '../context/wishlist';
 import { useParams } from 'react-router-dom';
 import { useAuth } from '../context/auth';
+import { toast } from 'react-toastify';
 
 function ProductDetails() {
-
+    const [wish, setWish] = useWish();
+    const [cart, setCart] = useCart();
     const [auth, setAuth] = useAuth();
     const [product, setProduct] = useState(null);
     const { id } = useParams();
@@ -146,7 +150,19 @@ function ProductDetails() {
                                 <p className='fs-4 fw-normal' style={{ color: "#007600" }}>In Stock</p>
 
                                 <div className="d-grid gap-2 pb-3">
-                                    <button className='btn btn-primary shadow rounded-5' type='submit' >
+                                    <button className='btn btn-primary shadow rounded-5'
+                                        onClick={() => {
+                                            if (cart.some(i => i._id === product._id)) {
+                                                toast.error('Item already in cart');
+                                            }
+                                            else {
+                                                const updatedItem = { ...product, q: 1 };
+                                                setCart([...cart, updatedItem])
+                                                localStorage.setItem("cart", JSON.stringify([...cart, updatedItem]))
+                                                toast.success('Item Added to cart');
+                                            }
+
+                                        }} >
                                         Add to cart
                                     </button>
                                 </div>
@@ -158,7 +174,19 @@ function ProductDetails() {
                             <div className="card-body">
                                 <hr />
                                 <div className="d-grid gap-2">
-                                    <button className='btn btn-warning shadow rounded-5' type='submit' >
+                                    <button className='btn btn-warning shadow rounded-5' type='button'
+                                        onClick={() => {
+                                            if (wish.some(i => i._id === product._id)) {
+                                                toast.error('Item already in Whislist');
+                                            }
+                                            else {
+                                                // const updatedItem = { ...product, q: 1 };
+                                                setWish([...wish, product])
+                                                localStorage.setItem("wish", JSON.stringify([...wish, product]))
+                                                toast.success('Item Added to Whislist');
+                                            }
+
+                                        }}  >
                                         Add to wishlist
                                     </button>
                                 </div>

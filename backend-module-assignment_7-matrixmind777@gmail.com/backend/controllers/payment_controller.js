@@ -34,7 +34,7 @@ const brainTreePayment = async (req, res) => {
         const { nonce, cart } = req.body;
         let total = 0;
         cart.map((i) => {
-            total += i.price;
+            total += i.price*i.q;
         });
         let newTransaction = gateway.transaction.sale(
             {

@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Button, Card, Col, Container, Form, Row } from "react-bootstrap"
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from "axios";
 const SignUp = () => {
+    const navigate=useNavigate()
     const [user, setUser] = useState({ name: '', email: '', username: '', password: '' });
     const submitHandler = async (e) => {
         // console.log(user);
@@ -15,6 +16,7 @@ const SignUp = () => {
                 // console.log(resp.data.message);
                 toast.success(resp.data.message);
                 setUser({ name: '', email: '', username: '', password: '' });
+                navigate("/")
             }
         } catch (error) {
             // console.log(error);

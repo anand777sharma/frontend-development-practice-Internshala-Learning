@@ -20,14 +20,16 @@ const userSchema = new mongoose.Schema({
     },
     profileImg: {
         type: String,
-        default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjybLjs5MZ1ekIyG18wL6QPZ6WAaAGPJmkmK8tUsJNCA&s"
+        default: "https://soccerpointeclaire.com/wp-content/uploads/2021/06/default-profile-pic-e1513291410505.jpg"
     },
     location: {
         type: String,
+        default:null
 
     },
-    dateOfBirth: {
-        type: Date
+    dateofbirth: {
+        type: Date,
+        default:null
     },
     followers: [
         {

@@ -1,17 +1,29 @@
-.modal-footer{
-    height: 55px!important;
-    padding: 2px 0px!important;
+.modal-footer {
+    height: 55px !important;
+    padding: 2px 0px !important;
     margin: 0 6px !important;
     /* border-top: 1px solid gray !important; */
 }
-.modal-dialog{
+
+.modal-dialog {
     max-width: 600px !important;
     border-radius: 50% !important;
 }
-.modal-body{
+
+.modal-body {
     padding: 16px 18px 5px 18px !important;
     font-size: 16px !important;
 }
-textarea{
+
+textarea {
     font-size: 21px !important;
+}
+
+.replyline {
+    position: relative;
+    z-index: 100;
+    width: 70px;
+    rotate: 90deg;
+    top:-25px;
+    right:-5px
 }

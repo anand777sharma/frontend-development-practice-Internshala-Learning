@@ -55,12 +55,8 @@ const login = async (req, res) => {
         }
         if (match) {
             const token = await jwt.sign(payload, process.env.JWT_SECRET);
-            const userdata = {
-                _id: user._id,
-                name: user.name,
-                email: user.email,
-                username: user.username,
-            }
+            const uid=user._id;
+            const userdata = await User.findOne(uid,'-password')
             return res.status(200).json({ message: "Logged in successfully", token, user: userdata })
         } else {
             return res.status(400).json({ message: "Email and password Incorrect.." })
